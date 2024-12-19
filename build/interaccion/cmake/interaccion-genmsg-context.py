@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = "/home/ueki/catkin_ws/src/interaccion/msg/inf_personal_usuario.msg;/home/ueki/catkin_ws/src/interaccion/msg/pos_usuario.msg;/home/ueki/catkin_ws/src/interaccion/msg/usuario.msg"
-services_str = ""
+services_str = "/home/ueki/catkin_ws/src/interaccion/srv/Multiplicador.srv"
 pkg_name = "interaccion"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

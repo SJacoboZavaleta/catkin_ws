@@ -56,7 +56,9 @@ include interaccion/CMakeFiles/interaccion_generate_messages_py.dir/progress.mak
 interaccion/CMakeFiles/interaccion_generate_messages_py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/_inf_personal_usuario.py
 interaccion/CMakeFiles/interaccion_generate_messages_py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/_pos_usuario.py
 interaccion/CMakeFiles/interaccion_generate_messages_py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/_usuario.py
+interaccion/CMakeFiles/interaccion_generate_messages_py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv/_Multiplicador.py
 interaccion/CMakeFiles/interaccion_generate_messages_py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/__init__.py
+interaccion/CMakeFiles/interaccion_generate_messages_py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv/__init__.py
 
 
 /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/_inf_personal_usuario.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
@@ -76,18 +78,34 @@ interaccion/CMakeFiles/interaccion_generate_messages_py: /home/ueki/catkin_ws/de
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ueki/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG interaccion/usuario"
 	cd /home/ueki/catkin_ws/build/interaccion && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ueki/catkin_ws/src/interaccion/msg/usuario.msg -Iinteraccion:/home/ueki/catkin_ws/src/interaccion/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interaccion -o /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg
 
+/home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv/_Multiplicador.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv/_Multiplicador.py: /home/ueki/catkin_ws/src/interaccion/srv/Multiplicador.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ueki/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV interaccion/Multiplicador"
+	cd /home/ueki/catkin_ws/build/interaccion && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ueki/catkin_ws/src/interaccion/srv/Multiplicador.srv -Iinteraccion:/home/ueki/catkin_ws/src/interaccion/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interaccion -o /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv
+
 /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/__init__.py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/_inf_personal_usuario.py
 /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/__init__.py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/_pos_usuario.py
 /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/__init__.py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/_usuario.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ueki/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for interaccion"
+/home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/__init__.py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv/_Multiplicador.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ueki/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for interaccion"
 	cd /home/ueki/catkin_ws/build/interaccion && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg --initpy
+
+/home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv/__init__.py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/_inf_personal_usuario.py
+/home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv/__init__.py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/_pos_usuario.py
+/home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv/__init__.py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/_usuario.py
+/home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv/__init__.py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv/_Multiplicador.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ueki/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python srv __init__.py for interaccion"
+	cd /home/ueki/catkin_ws/build/interaccion && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv --initpy
 
 interaccion_generate_messages_py: interaccion/CMakeFiles/interaccion_generate_messages_py
 interaccion_generate_messages_py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/_inf_personal_usuario.py
 interaccion_generate_messages_py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/_pos_usuario.py
 interaccion_generate_messages_py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/_usuario.py
+interaccion_generate_messages_py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv/_Multiplicador.py
 interaccion_generate_messages_py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/msg/__init__.py
+interaccion_generate_messages_py: /home/ueki/catkin_ws/devel/lib/python3/dist-packages/interaccion/srv/__init__.py
 interaccion_generate_messages_py: interaccion/CMakeFiles/interaccion_generate_messages_py.dir/build.make
 
 .PHONY : interaccion_generate_messages_py

@@ -50,6 +50,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/interaccion/srv" TYPE FILE FILES "/home/ueki/catkin_ws/src/interaccion/srv/Multiplicador.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/interaccion/cmake" TYPE FILE FILES "/home/ueki/catkin_ws/build/interaccion/catkin_generated/installspace/interaccion-msg-paths.cmake")
 endif()
 

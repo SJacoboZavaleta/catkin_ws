@@ -1,31 +1,31 @@
 #!/usr/bin/env python3
 
 """
-ROS Node: empaquetador_nodo
-Author: Sergio Jacobo-Zavaleta
-Date: 18/12/24
+Nodo ROS: empaquetador_nodo
+Autor: Sergio Jacobo-Zavaleta
+Fecha: 18/12/24
 """
+
 import rospy
 from interaccion.msg import inf_personal_usuario, pos_usuario, usuario
 from std_msgs.msg import String
 
 class Empaquetador_NODO:
     """
-    A ROS node class for subscribing and then publishing a message.
+    Clase de nodo ROS para suscribirse y luego publicar un mensaje.
     
-    This class demonstrates:
-    - Creating a ROS publisher and several subscribers
-    - Publishing a custom message
+    Esta clase demuestra:
+    - Crear un publicador de ROS y varios suscriptores
+    - Publicar un mensaje personalizado
     """
 
     def __init__(self):
         """
-        Initialize the ROS node and set up publishers.
+        Inicializa el nodo ROS y configura los publicadores.
         
-        Sets up:
-        - String topic publisher
-        - String name, int edad and String[] idiomas from users using 
-            a custom message publishers
+        Configura:
+        - Suscriptores para tópicos de tipo String, inf_personal_usuario y pos_usuario
+        - Publicador para el tópico de usuario
         """
         # Suscriptores        
         rospy.Subscriber(
@@ -47,36 +47,47 @@ class Empaquetador_NODO:
             usuario, 
             queue_size=10)
 
-        self._confirmation_publisher = rospy.Publisher(
-            "confirm_user_topic", 
-            String, 
-            queue_size=10)
+        # Versión: Esperar a publicar el mensaje empaquetado para pedir nuevos datos en los otros nodos
+        # ----------
+        # self._confirmation_publisher = rospy.Publisher(
+        #     "confirm_user_topic", 
+        #     String, 
+        #     queue_size=10)
+        # ----------
 
-
-        # Variables
+        # Variables para almacenar los datos recibidos
         self.inf_personal = None
         self.emocion = None
         self.posicion = None
 
-        # Small delay to ensure publisher is ready
-        #rospy.sleep(1)
-
-        # Run the main logic
+        # Ejecutar la lógica principal
         # self._run()
     
     def callback_info(self, msg):
+        """
+        Callback para procesar los datos de información personal.
+        """
         self.inf_personal = msg
         self.check_and_publish()
 
     def callback_emocion(self, msg):
+        """
+        Callback para procesar la emoción del usuario.
+        """
         self.emocion = msg.data
         self.check_and_publish()
 
     def callback_posicion(self, msg):
+        """
+        Callback para procesar la posición del usuario.
+        """
         self.posicion = msg
         self.check_and_publish()
 
     def check_and_publish(self):
+        """
+        Verifica si todos los datos necesarios han sido recibidos y publica el mensaje empaquetado.
+        """
         if self.inf_personal and self.emocion and self.posicion:
             msg = usuario()
             msg.infPersonal = self.inf_personal
@@ -86,40 +97,43 @@ class Empaquetador_NODO:
             self._user_publisher.publish(msg)
             rospy.loginfo("Datos procesados y publicados.")
 
+            # Versión: Esperar a publicar el mensaje empaquetado para pedir nuevos datos en los otros nodos
+            # ----------
             # Publicar confirmación
-            self._confirmation_publisher.publish("Datos procesados")
+            # self._confirmation_publisher.publish("Datos procesados")
 
             # Reset para recibir nuevos datos
-            self.inf_personal = None
-            self.emocion = None
-            self.posicion = None
-    
+            # self.inf_personal = None
+            # self.emocion = None
+            # self.posicion = None
+            # ----------
+
     def _run(self):
         """
-        Main method to execute node's primary logic.
+        Método principal para ejecutar la lógica primaria del nodo.
         
-        Calls methods to publish different types of messages.
+        Llama a los métodos para publicar diferentes tipos de mensajes.
         """
-        # nada que hacer aqui
+        # Nada que hacer aquí
 
 def main():
     """
-    Main function to initialize and run the ROS node.
+    Función principal para inicializar y ejecutar el nodo ROS.
     """
     try:
-        # Node name
+        # Nombre del nodo
         node_name = "empaquetador_nodo"
         
-        # Initialize the node
+        # Inicializar el nodo
         rospy.init_node(node_name)
-        rospy.loginfo(f"Node {node_name} has started")
+        rospy.loginfo(f"El nodo {node_name} ha iniciado")
         
-        # Create node instance and keep it running
+        # Crear instancia del nodo y mantenerlo en ejecución
         Empaquetador_NODO()
         rospy.spin()
     
     except rospy.ROSInterruptException:
-        rospy.loginfo("Node execution interrupted")
+        rospy.loginfo("Ejecución del nodo interrumpida")
 
 if __name__ == "__main__":
     main()

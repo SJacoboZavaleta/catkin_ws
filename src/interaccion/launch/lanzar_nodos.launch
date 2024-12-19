@@ -1,7 +1,8 @@
 <launch>
-    <node name="empaquetador_nodo" pkg="interaccion" type="empaquetador_nodo.py" output="screen" required="true"/>
-    <node name="dialogo_nodo" pkg="interaccion" type="dialogo_nodo.py" output="screen" required="true"/>
-    <node name="informacion_personal_nodo" pkg="interaccion" type="informacion_personal_nodo.py" output="screen" required="true"/>
-    <node name="emocion_usuario_nodo" pkg="interaccion" type="emocion_usuario_nodo.py" output="screen" required="true"/>
-    <node name="posicion_usuario_nodo" pkg="interaccion" type="posicion_usuario_nodo.py" output="screen" required="true"/>
+    <node name="matematico_nodo" pkg="interaccion" type="matematico_nodo.py" output="screen" required="true" launch-prefix="gnome-terminal --"/>
+    <node name="empaquetador_nodo" pkg="interaccion" type="empaquetador_nodo.py" output="screen" required="true" launch-prefix="gnome-terminal --"/>
+    <node name="dialogo_nodo" pkg="interaccion" type="dialogo_nodo.py" output="screen" required="true" launch-prefix="gnome-terminal --"/>
+    <node name="informacion_personal_nodo" pkg="interaccion" type="informacion_personal_nodo.py" output="screen" required="true" launch-prefix="gnome-terminal --"/>
+    <node name="emocion_usuario_nodo" pkg="interaccion" type="emocion_usuario_nodo.py" output="screen" required="true" launch-prefix="gnome-terminal --"/>
+    <node name="posicion_usuario_nodo" pkg="interaccion" type="posicion_usuario_nodo.py" output="screen" required="true" launch-prefix="gnome-terminal --"/>
 </launch>
