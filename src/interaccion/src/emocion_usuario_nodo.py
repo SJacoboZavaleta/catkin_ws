@@ -82,11 +82,11 @@ class Emocion_usuario_NODO:
                         break
                     print("La emocion no puede estar vacío. Por favor, ingréselo de nuevo.")
 
-                    # Crear y publicar el mensaje
-                    self._string_publisher.publish(emocion)
+                # Crear y publicar el mensaje
+                self._string_publisher.publish(emocion)
 
-                    # Deshabilitar hasta recibir confirmación
-                    self.ready_to_publish = False
+                # Deshabilitar hasta recibir confirmación
+                self.ready_to_publish = False
             
             rate.sleep()
 
