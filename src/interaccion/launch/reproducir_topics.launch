@@ -1,0 +1,21 @@
+<launch>
+    <!-- Nodos Python -->
+    <node name="matematico_nodo" pkg="interaccion" type="matematico_nodo.py" output="screen" required="true" />
+    <node name="empaquetador_nodo" pkg="interaccion" type="empaquetador_nodo.py" output="screen" required="true" />
+    <node name="dialogo_nodo" pkg="interaccion" type="dialogo_nodo.py" output="screen" required="true" />
+    <node name="informacion_personal_nodo" pkg="interaccion" type="informacion_personal_nodo.py" output="screen" required="true" />
+    <node name="emocion_usuario_nodo" pkg="interaccion" type="emocion_usuario_nodo.py" output="screen" required="true" />
+    <node name="posicion_usuario_nodo" pkg="interaccion" type="posicion_usuario_nodo.py" output="screen" required="true" />
+
+    <!-- Terminal windows for topic monitoring -->
+    <node name="monitor_inf_pers" pkg="rostopic" type="rostopic" args="echo /inf_pers_topic" output="screen" launch-prefix="gnome-terminal --" required="true" />
+    <node name="monitor_pos_usuario" pkg="rostopic" type="rostopic" args="echo /pos_usuario_topic" output="screen" launch-prefix="gnome-terminal --" required="true" />
+    <node name="monitor_emocion" pkg="rostopic" type="rostopic" args="echo /emocion_topic" output="screen" launch-prefix="gnome-terminal --" required="true" />
+    <node name="monitor_user" pkg="rostopic" type="rostopic" args="echo /user_topic" output="screen" launch-prefix="gnome-terminal --" required="true" />
+    <node name="monitor_multiplicador" pkg="rostopic" type="rostopic" args="echo /multiplicador_resultado_topic" output="screen" launch-prefix="gnome-terminal --" required="true" />
+
+    <!-- Rosbag play -->
+    <node name="rosbag_play" pkg="rosbag" type="play" 
+          args="$(find interaccion)/src/grabacion_usuarios.bag" 
+          required="true" output="screen" launch-prefix="gnome-terminal --" />
+</launch>
