@@ -103,9 +103,9 @@ class Empaquetador_NODO:
             # self._confirmation_publisher.publish("Datos procesados")
 
             # Reset para recibir nuevos datos
-            # self.inf_personal = None
-            # self.emocion = None
-            # self.posicion = None
+            self.inf_personal = None
+            self.emocion = None
+            self.posicion = None
             # ----------
 
     def _run(self):

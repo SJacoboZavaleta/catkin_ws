@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "/home/ueki/catkin_ws/devel/share/common-lisp/ros/interaccion/msg/inf_personal_usuario.lisp"
   "/home/ueki/catkin_ws/devel/share/common-lisp/ros/interaccion/msg/pos_usuario.lisp"
+  "/home/ueki/catkin_ws/devel/share/common-lisp/ros/interaccion/msg/terminal_resultado.lisp"
   "/home/ueki/catkin_ws/devel/share/common-lisp/ros/interaccion/msg/usuario.lisp"
   "/home/ueki/catkin_ws/devel/share/common-lisp/ros/interaccion/srv/Multiplicador.lisp"
   "CMakeFiles/interaccion_generate_messages_lisp"

@@ -46,6 +46,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/ueki/catkin_ws/src/interaccion/msg/inf_personal_usuario.msg"
     "/home/ueki/catkin_ws/src/interaccion/msg/pos_usuario.msg"
     "/home/ueki/catkin_ws/src/interaccion/msg/usuario.msg"
+    "/home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg"
     )
 endif()
 

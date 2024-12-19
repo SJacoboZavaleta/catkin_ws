@@ -8,6 +8,8 @@
     (:file "_package_inf_personal_usuario" :depends-on ("_package"))
     (:file "pos_usuario" :depends-on ("_package_pos_usuario"))
     (:file "_package_pos_usuario" :depends-on ("_package"))
+    (:file "terminal_resultado" :depends-on ("_package_terminal_resultado"))
+    (:file "_package_terminal_resultado" :depends-on ("_package"))
     (:file "usuario" :depends-on ("_package_usuario"))
     (:file "_package_usuario" :depends-on ("_package"))
   ))

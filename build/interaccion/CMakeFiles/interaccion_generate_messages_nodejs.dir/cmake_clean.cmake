@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "/home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg/inf_personal_usuario.js"
   "/home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg/pos_usuario.js"
+  "/home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg/terminal_resultado.js"
   "/home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg/usuario.js"
   "/home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/srv/Multiplicador.js"
   "CMakeFiles/interaccion_generate_messages_nodejs"

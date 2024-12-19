@@ -7,7 +7,7 @@ Fecha: 18/12/24
 """
 
 import rospy
-from interaccion.msg import usuario
+from interaccion.msg import usuario, terminal_resultado
 from interaccion.srv import Multiplicador
 
 class Dialogo_NODO:
@@ -36,11 +36,19 @@ class Dialogo_NODO:
             Multiplicador)
         rospy.loginfo("El servicio 'servicio_multiplicador' ya está disponible")
 
+        # Suscribirse al topic generado por empaquetador_nodo
         self.subscriber = rospy.Subscriber(
             'user_topic', 
             usuario, 
             self.process_user_data)
         
+        # Publicar el resultado del servicio 'servicio_multiplicador' mostrado en terminal
+        self.multiplicador_publisher = rospy.Publisher(
+            'multiplicador_resultado_topic', 
+            terminal_resultado,  # Define este mensaje en tu paquete
+            queue_size=10
+        )
+
     def process_user_data(self, msg):
         """
         Función de callback para procesar los datos del usuario y llamar al servicio 'multiplicador'.
@@ -58,6 +66,13 @@ class Dialogo_NODO:
             edad_doblada = self.multiplicador_service(msg.infPersonal.edad)
             print(f"Edad Doblada: {edad_doblada.resultado}")
             print("-------------------------------")
+
+            # Publicar el resultado del servicio en un topic (conveniente para rosbag)
+            resultado_msg = terminal_resultado()
+            resultado_msg.nombre = msg.infPersonal.nombre
+            resultado_msg.edad_original = msg.infPersonal.edad
+            resultado_msg.edad_doblada = edad_doblada.resultado
+            self.multiplicador_publisher.publish(resultado_msg)
 
         except rospy.ServiceException as e:
             rospy.logerr(f"La llamada al servicio falló: {e}")

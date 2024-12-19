@@ -1,0 +1,3 @@
+string nombre
+int32 edad_original
+int32 edad_doblada

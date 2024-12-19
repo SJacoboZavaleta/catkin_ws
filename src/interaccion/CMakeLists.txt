@@ -52,6 +52,7 @@ add_message_files(
   inf_personal_usuario.msg
   pos_usuario.msg
   usuario.msg
+  terminal_resultado.msg
 )
 
 ## Generate services in the 'srv' folder

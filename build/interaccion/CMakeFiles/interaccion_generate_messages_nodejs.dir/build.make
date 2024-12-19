@@ -56,6 +56,7 @@ include interaccion/CMakeFiles/interaccion_generate_messages_nodejs.dir/progress
 interaccion/CMakeFiles/interaccion_generate_messages_nodejs: /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg/inf_personal_usuario.js
 interaccion/CMakeFiles/interaccion_generate_messages_nodejs: /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg/pos_usuario.js
 interaccion/CMakeFiles/interaccion_generate_messages_nodejs: /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg/usuario.js
+interaccion/CMakeFiles/interaccion_generate_messages_nodejs: /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg/terminal_resultado.js
 interaccion/CMakeFiles/interaccion_generate_messages_nodejs: /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/srv/Multiplicador.js
 
 
@@ -76,15 +77,21 @@ interaccion/CMakeFiles/interaccion_generate_messages_nodejs: /home/ueki/catkin_w
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ueki/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from interaccion/usuario.msg"
 	cd /home/ueki/catkin_ws/build/interaccion && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ueki/catkin_ws/src/interaccion/msg/usuario.msg -Iinteraccion:/home/ueki/catkin_ws/src/interaccion/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interaccion -o /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg
 
+/home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg/terminal_resultado.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg/terminal_resultado.js: /home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ueki/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from interaccion/terminal_resultado.msg"
+	cd /home/ueki/catkin_ws/build/interaccion && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg -Iinteraccion:/home/ueki/catkin_ws/src/interaccion/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interaccion -o /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg
+
 /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/srv/Multiplicador.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/srv/Multiplicador.js: /home/ueki/catkin_ws/src/interaccion/srv/Multiplicador.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ueki/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from interaccion/Multiplicador.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ueki/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from interaccion/Multiplicador.srv"
 	cd /home/ueki/catkin_ws/build/interaccion && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ueki/catkin_ws/src/interaccion/srv/Multiplicador.srv -Iinteraccion:/home/ueki/catkin_ws/src/interaccion/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p interaccion -o /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/srv
 
 interaccion_generate_messages_nodejs: interaccion/CMakeFiles/interaccion_generate_messages_nodejs
 interaccion_generate_messages_nodejs: /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg/inf_personal_usuario.js
 interaccion_generate_messages_nodejs: /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg/pos_usuario.js
 interaccion_generate_messages_nodejs: /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg/usuario.js
+interaccion_generate_messages_nodejs: /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/msg/terminal_resultado.js
 interaccion_generate_messages_nodejs: /home/ueki/catkin_ws/devel/share/gennodejs/ros/interaccion/srv/Multiplicador.js
 interaccion_generate_messages_nodejs: interaccion/CMakeFiles/interaccion_generate_messages_nodejs.dir/build.make
 

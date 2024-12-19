@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "interaccion: 3 messages, 1 services")
+message(STATUS "interaccion: 4 messages, 1 services")
 
 set(MSG_I_FLAGS "-Iinteraccion:/home/ueki/catkin_ws/src/interaccion/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -32,6 +32,11 @@ add_custom_target(_interaccion_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "interaccion" "/home/ueki/catkin_ws/src/interaccion/msg/usuario.msg" "interaccion/pos_usuario:interaccion/inf_personal_usuario"
 )
 
+get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg" NAME_WE)
+add_custom_target(_interaccion_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "interaccion" "/home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg" ""
+)
+
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/srv/Multiplicador.srv" NAME_WE)
 add_custom_target(_interaccion_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "interaccion" "/home/ueki/catkin_ws/src/interaccion/srv/Multiplicador.srv" ""
@@ -61,6 +66,12 @@ _generate_msg_cpp(interaccion
   "/home/ueki/catkin_ws/src/interaccion/msg/pos_usuario.msg;/home/ueki/catkin_ws/src/interaccion/msg/inf_personal_usuario.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/interaccion
 )
+_generate_msg_cpp(interaccion
+  "/home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/interaccion
+)
 
 ### Generating Services
 _generate_srv_cpp(interaccion
@@ -87,6 +98,8 @@ add_dependencies(interaccion_generate_messages_cpp _interaccion_generate_message
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/pos_usuario.msg" NAME_WE)
 add_dependencies(interaccion_generate_messages_cpp _interaccion_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/usuario.msg" NAME_WE)
+add_dependencies(interaccion_generate_messages_cpp _interaccion_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg" NAME_WE)
 add_dependencies(interaccion_generate_messages_cpp _interaccion_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/srv/Multiplicador.srv" NAME_WE)
 add_dependencies(interaccion_generate_messages_cpp _interaccion_generate_messages_check_deps_${_filename})
@@ -118,6 +131,12 @@ _generate_msg_eus(interaccion
   "/home/ueki/catkin_ws/src/interaccion/msg/pos_usuario.msg;/home/ueki/catkin_ws/src/interaccion/msg/inf_personal_usuario.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/interaccion
 )
+_generate_msg_eus(interaccion
+  "/home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/interaccion
+)
 
 ### Generating Services
 _generate_srv_eus(interaccion
@@ -144,6 +163,8 @@ add_dependencies(interaccion_generate_messages_eus _interaccion_generate_message
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/pos_usuario.msg" NAME_WE)
 add_dependencies(interaccion_generate_messages_eus _interaccion_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/usuario.msg" NAME_WE)
+add_dependencies(interaccion_generate_messages_eus _interaccion_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg" NAME_WE)
 add_dependencies(interaccion_generate_messages_eus _interaccion_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/srv/Multiplicador.srv" NAME_WE)
 add_dependencies(interaccion_generate_messages_eus _interaccion_generate_messages_check_deps_${_filename})
@@ -175,6 +196,12 @@ _generate_msg_lisp(interaccion
   "/home/ueki/catkin_ws/src/interaccion/msg/pos_usuario.msg;/home/ueki/catkin_ws/src/interaccion/msg/inf_personal_usuario.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/interaccion
 )
+_generate_msg_lisp(interaccion
+  "/home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/interaccion
+)
 
 ### Generating Services
 _generate_srv_lisp(interaccion
@@ -201,6 +228,8 @@ add_dependencies(interaccion_generate_messages_lisp _interaccion_generate_messag
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/pos_usuario.msg" NAME_WE)
 add_dependencies(interaccion_generate_messages_lisp _interaccion_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/usuario.msg" NAME_WE)
+add_dependencies(interaccion_generate_messages_lisp _interaccion_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg" NAME_WE)
 add_dependencies(interaccion_generate_messages_lisp _interaccion_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/srv/Multiplicador.srv" NAME_WE)
 add_dependencies(interaccion_generate_messages_lisp _interaccion_generate_messages_check_deps_${_filename})
@@ -232,6 +261,12 @@ _generate_msg_nodejs(interaccion
   "/home/ueki/catkin_ws/src/interaccion/msg/pos_usuario.msg;/home/ueki/catkin_ws/src/interaccion/msg/inf_personal_usuario.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/interaccion
 )
+_generate_msg_nodejs(interaccion
+  "/home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/interaccion
+)
 
 ### Generating Services
 _generate_srv_nodejs(interaccion
@@ -258,6 +293,8 @@ add_dependencies(interaccion_generate_messages_nodejs _interaccion_generate_mess
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/pos_usuario.msg" NAME_WE)
 add_dependencies(interaccion_generate_messages_nodejs _interaccion_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/usuario.msg" NAME_WE)
+add_dependencies(interaccion_generate_messages_nodejs _interaccion_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg" NAME_WE)
 add_dependencies(interaccion_generate_messages_nodejs _interaccion_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/srv/Multiplicador.srv" NAME_WE)
 add_dependencies(interaccion_generate_messages_nodejs _interaccion_generate_messages_check_deps_${_filename})
@@ -289,6 +326,12 @@ _generate_msg_py(interaccion
   "/home/ueki/catkin_ws/src/interaccion/msg/pos_usuario.msg;/home/ueki/catkin_ws/src/interaccion/msg/inf_personal_usuario.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/interaccion
 )
+_generate_msg_py(interaccion
+  "/home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/interaccion
+)
 
 ### Generating Services
 _generate_srv_py(interaccion
@@ -315,6 +358,8 @@ add_dependencies(interaccion_generate_messages_py _interaccion_generate_messages
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/pos_usuario.msg" NAME_WE)
 add_dependencies(interaccion_generate_messages_py _interaccion_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/usuario.msg" NAME_WE)
+add_dependencies(interaccion_generate_messages_py _interaccion_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/msg/terminal_resultado.msg" NAME_WE)
 add_dependencies(interaccion_generate_messages_py _interaccion_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ueki/catkin_ws/src/interaccion/srv/Multiplicador.srv" NAME_WE)
 add_dependencies(interaccion_generate_messages_py _interaccion_generate_messages_check_deps_${_filename})
