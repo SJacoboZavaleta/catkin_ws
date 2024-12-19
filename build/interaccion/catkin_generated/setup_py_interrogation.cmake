@@ -1,0 +1,7 @@
+set(interaccion_SETUP_PY_SETUP_MODULE "setuptools")
+set(interaccion_SETUP_PY_VERSION "0.0.0")
+set(interaccion_SETUP_PY_SCRIPTS "")
+set(interaccion_SETUP_PY_PACKAGES "interaccion")
+set(interaccion_SETUP_PY_PACKAGE_DIRS "src/interaccion")
+set(interaccion_SETUP_PY_MODULES "")
+set(interaccion_SETUP_PY_MODULE_DIRS "")
