@@ -1,0 +1,2 @@
+interaccion
+-DCATKIN_DEVEL_PREFIX=/home/ueki/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ueki/catkin_ws/install -G Unix Makefiles
