@@ -10,7 +10,7 @@ import rospy
 
 from std_msgs.msg import String
 
-class emocion_usuario_NODO:
+class Emocion_usuario_NODO:
     """
     A ROS node class for publishing a message to one topic.
     
@@ -35,11 +35,20 @@ class emocion_usuario_NODO:
             queue_size=10
         )
 
+        self.ready_to_publish = True
+        rospy.Subscriber(
+            "confirm_user_topic", 
+            String, 
+            self.confirm_callback)
+
         # Small delay to ensure publisher is ready
         #rospy.sleep(1)
 
         # Run the main logic
         self._run()
+
+    def confirm_callback(self, msg):
+        self.ready_to_publish = True
 
     def _run(self):
         """
@@ -47,7 +56,7 @@ class emocion_usuario_NODO:
         
         Calls methods to publish different types of messages.
         """
-        rate = rospy.Rate(1)
+        rate = rospy.Rate(0.5)
         self.query_info(rate)
 
     def query_info(self,rate):
@@ -66,15 +75,19 @@ class emocion_usuario_NODO:
 
         while not rospy.is_shutdown():
             # Obtener la emocion
-            while True:
-                emocion = input("Emoción del usuario: ").strip()
-                if emocion:  # Verifica que el nombre no esté vacío
-                    break
-                print("La emocion no puede estar vacío. Por favor, ingréselo de nuevo.")
+            if self.ready_to_publish:
+                while True:
+                    emocion = input("Emoción del usuario: ").strip()
+                    if emocion:  # Verifica que el nombre no esté vacío
+                        break
+                    print("La emocion no puede estar vacío. Por favor, ingréselo de nuevo.")
 
-            # Crear y publicar el mensaje
+                    # Crear y publicar el mensaje
+                    self._string_publisher.publish(emocion)
 
-            self._string_publisher.publish(emocion)
+                    # Deshabilitar hasta recibir confirmación
+                    self.ready_to_publish = False
+            
             rate.sleep()
 
    
@@ -93,7 +106,7 @@ def main():
         rospy.loginfo(f"Node {node_name} has started")
         
         # Create node instance and keep it running
-        emocion_usuario_NODO()
+        Emocion_usuario_NODO()
         rospy.spin()
     
     except rospy.ROSInterruptException:
